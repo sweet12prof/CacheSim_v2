@@ -1,5 +1,5 @@
-#include "CacheConfig.hpp"
-#include <iostream>
+#include   "../HeaderFiles/CacheConfig.hpp"
+
 
 //--------------Constructors
 
@@ -55,6 +55,10 @@ void Cache::setFlattenedIndex() {
 template <typename T>
 void Cache::resizeField(std::vector<T> &field) {
 	field.resize(this->FlattenedIndex);
+}
+
+void Cache::resizeDataField(std::vector <int> & dataField){
+	dataField.resize(this->FlattenedIndex * this->numOfBlocks);
 }
 
 //--------------------------------------------------//
@@ -129,7 +133,7 @@ std::pair <bool, std::pair <bool, int> > Cache::isHitAccess(const int& Tag, cons
 	std::cout << "search address is : " << searchAddress << std::endl;
 
 	if (searchAddress >= Cache::FlattenedIndex)
-		return { false, {false, -1} };
+		return { false, {this->isDirtyField.at(Cache::blockToEvict(searchAddress % Cache::cacheIndex)), -1} };
 
 	else if ((this->tagField.at(searchAddress) == Tag) && (this->validField.at(searchAddress) == true))
 		return { true, {this->isDirtyField.at(searchAddress), searchAddress} };
@@ -142,4 +146,60 @@ std::pair <bool, std::pair <bool, int> > Cache::isHitAccess(const int& Tag, cons
 	}
 		
 		
+}
+
+std::pair <bool, bool> Cache::CacheRead(const int & Tag, const int & address){
+	int searchAddress = Cache::getassociativity() > 1 ?  Cache::normalizeAddress(address) : address;
+	
+	std::pair <bool, std::pair <bool, int> >  accessResult = Cache::isHitAccess(Tag, searchAddress);
+	std::pair <bool, bool> returnPair {accessResult.first, accessResult.second.first};
+	
+	if(accessResult.first == false ){
+		if(accessResult.second.first == true){
+			Cache::CacheWriteback(searchAddress);
+		    int loc = Cache::LRUupdate(searchAddress, -1);
+			Cache::mainMemoryFetch(Tag, searchAddress, loc);
+		}
+		else {
+				 int loc = Cache::LRUupdate(searchAddress, -1);
+				 Cache::mainMemoryFetch(Tag, searchAddress, loc);
+		}
+	}
+	
+	else{
+			int loc = Cache::LRUupdate(accessResult.second.second, accessResult.second.second/this->cacheIndex);
+	} 
+
+	return returnPair;
+
+}
+
+void Cache::CacheWriteback(const int & searchAddress){
+	int  blockToEvict = Cache::blockToEvict(searchAddress);
+	Cache::validField.at(blockToEvict) = false;
+	Cache::isDirtyField.at(blockToEvict) = false;
+}
+
+int Cache::blockToEvict(const int & address){
+	return ((cacheIndex * (associativity - 1)) + address);	
+}
+
+
+int Cache::LRUupdate(const int & searchAddress, const int  IndexMultiple){
+	std::vector <int> lruBitsAtIndex;
+	std::vector <int> resultLRU;
+	int loc;
+	for(int i{searchAddress}; i < Cache::LRUField.size(); i+= Cache::cacheIndex)
+		lruBitsAtIndex.push_back(Cache::LRUField.at(i));
+
+	
+	return 1;
+}
+
+
+void Cache::mainMemoryFetch(const int & Tag, const int & searchAddress, const int & loc){
+	int address{ searchAddress + (Cache::cacheIndex * loc)};
+	Cache::validField.at(address) = true;
+	Cache::isDirtyField.at(address) = true;
+	Cache::tagField.at(address) = Tag;
 }

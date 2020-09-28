@@ -1,5 +1,5 @@
 #include <iostream>
-#include "CacheConfig.hpp"
+#include "./HeaderFiles/CacheConfig.hpp"
 #include <iomanip>
 
 template <typename T>
@@ -18,8 +18,9 @@ int main() {
 
 	accessPair.second = someCache.getassociativity() > 1 ?  someCache.normalizeAddress(512) : accessPair.second;
 	//std::cout << "second in pair is " << accessPair.second;
-	std::cout << std::endl << std::boolalpha << someCache.isHitAccess(accessPair.first, accessPair.second).first << std::endl;
-	std::vector <int> TagField = someCache.getTagField();
+	//std::cout << std::endl << std::boolalpha << someCache.isHitAccess(accessPair.first, accessPair.second).first << std::endl;
+	std::cout << std::endl << std::boolalpha << someCache.CacheRead(accessPair.first, accessPair.second).first;
+	std::vector <int> TagField = someCache.getLRUField();
 	printCacheField(TagField);
 	std::vector <bool> boolField = someCache.getValidField();
 	printCacheField(boolField);

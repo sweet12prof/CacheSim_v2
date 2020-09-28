@@ -1,6 +1,8 @@
-#pragma once
 #include <vector>
-#include <span>
+#include <iostream>
+#include <iterator>
+#include <algorithm>
+
 class Cache {
 	private :
 //Cache_Specifications
@@ -13,6 +15,7 @@ class Cache {
 		std::vector<bool> validField;
 		std::vector<bool> isDirtyField;
 		std::vector<int> LRUField;
+		std::vector<int> dataField;
 // Properties
 		int cacheIndex;
 		int numOfBlocks;
@@ -28,6 +31,7 @@ class Cache {
 		void setFlattenedIndex();
 		template <typename T>
 		void resizeField(std::vector <T> &);
+		void resizeDataField(std::vector <int> &);
 
 //Initialise fields that need initial Contents
 		void initialiseBoolFields(std::vector <bool>&);
@@ -49,7 +53,18 @@ class Cache {
 //CacheOperations
 		int  normalizeAddress(const int&);
 		std::pair <bool, std::pair <bool, int> > isHitAccess(const int &, const int&);
+		std::pair <bool, bool> CacheRead(const int &, const int&);
+		std::pair <bool, bool>  CacheWrite(const int &, const int &);
 
+
+		void CacheWriteback(const int &);
+		void mainMemoryFetch(const int &, const int &, const int &);
+		
+		int  blockToEvict(const int &);
+		int  getBlockToEvictIndexMultiple(const int &);
+
+
+		int LRUupdate(const int &, const int );
 
 };
 
