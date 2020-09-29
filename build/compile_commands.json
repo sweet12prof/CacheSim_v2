@@ -8,5 +8,15 @@
   "directory": "/home/sweet12prof/Desktop/Final/CacheSim_v2/build/SourceFiles",
   "command": "/opt/rh/devtoolset-9/root/usr/bin/g++    -g   -o CMakeFiles/Sources.dir/CacheConfig.cpp.o -c /home/sweet12prof/Desktop/Final/CacheSim_v2/SourceFiles/CacheConfig.cpp",
   "file": "/home/sweet12prof/Desktop/Final/CacheSim_v2/SourceFiles/CacheConfig.cpp"
+},
+{
+  "directory": "/home/sweet12prof/Desktop/Final/CacheSim_v2/build/SourceFiles",
+  "command": "/opt/rh/devtoolset-9/root/usr/bin/g++    -g   -o CMakeFiles/Sources.dir/CacheAnalyzer.cpp.o -c /home/sweet12prof/Desktop/Final/CacheSim_v2/SourceFiles/CacheAnalyzer.cpp",
+  "file": "/home/sweet12prof/Desktop/Final/CacheSim_v2/SourceFiles/CacheAnalyzer.cpp"
+},
+{
+  "directory": "/home/sweet12prof/Desktop/Final/CacheSim_v2/build/SourceFiles",
+  "command": "/opt/rh/devtoolset-9/root/usr/bin/g++    -g   -o CMakeFiles/Sources.dir/FileHelper.cpp.o -c /home/sweet12prof/Desktop/Final/CacheSim_v2/SourceFiles/FileHelper.cpp",
+  "file": "/home/sweet12prof/Desktop/Final/CacheSim_v2/SourceFiles/FileHelper.cpp"
 }
 ]

@@ -125,6 +125,33 @@ Sources/fast:
 	cd /home/sweet12prof/Desktop/Final/CacheSim_v2/build && $(MAKE) -f SourceFiles/CMakeFiles/Sources.dir/build.make SourceFiles/CMakeFiles/Sources.dir/build
 .PHONY : Sources/fast
 
+CacheAnalyzer.o: CacheAnalyzer.cpp.o
+
+.PHONY : CacheAnalyzer.o
+
+# target to build an object file
+CacheAnalyzer.cpp.o:
+	cd /home/sweet12prof/Desktop/Final/CacheSim_v2/build && $(MAKE) -f SourceFiles/CMakeFiles/Sources.dir/build.make SourceFiles/CMakeFiles/Sources.dir/CacheAnalyzer.cpp.o
+.PHONY : CacheAnalyzer.cpp.o
+
+CacheAnalyzer.i: CacheAnalyzer.cpp.i
+
+.PHONY : CacheAnalyzer.i
+
+# target to preprocess a source file
+CacheAnalyzer.cpp.i:
+	cd /home/sweet12prof/Desktop/Final/CacheSim_v2/build && $(MAKE) -f SourceFiles/CMakeFiles/Sources.dir/build.make SourceFiles/CMakeFiles/Sources.dir/CacheAnalyzer.cpp.i
+.PHONY : CacheAnalyzer.cpp.i
+
+CacheAnalyzer.s: CacheAnalyzer.cpp.s
+
+.PHONY : CacheAnalyzer.s
+
+# target to generate assembly for a file
+CacheAnalyzer.cpp.s:
+	cd /home/sweet12prof/Desktop/Final/CacheSim_v2/build && $(MAKE) -f SourceFiles/CMakeFiles/Sources.dir/build.make SourceFiles/CMakeFiles/Sources.dir/CacheAnalyzer.cpp.s
+.PHONY : CacheAnalyzer.cpp.s
+
 CacheConfig.o: CacheConfig.cpp.o
 
 .PHONY : CacheConfig.o
@@ -152,6 +179,33 @@ CacheConfig.cpp.s:
 	cd /home/sweet12prof/Desktop/Final/CacheSim_v2/build && $(MAKE) -f SourceFiles/CMakeFiles/Sources.dir/build.make SourceFiles/CMakeFiles/Sources.dir/CacheConfig.cpp.s
 .PHONY : CacheConfig.cpp.s
 
+FileHelper.o: FileHelper.cpp.o
+
+.PHONY : FileHelper.o
+
+# target to build an object file
+FileHelper.cpp.o:
+	cd /home/sweet12prof/Desktop/Final/CacheSim_v2/build && $(MAKE) -f SourceFiles/CMakeFiles/Sources.dir/build.make SourceFiles/CMakeFiles/Sources.dir/FileHelper.cpp.o
+.PHONY : FileHelper.cpp.o
+
+FileHelper.i: FileHelper.cpp.i
+
+.PHONY : FileHelper.i
+
+# target to preprocess a source file
+FileHelper.cpp.i:
+	cd /home/sweet12prof/Desktop/Final/CacheSim_v2/build && $(MAKE) -f SourceFiles/CMakeFiles/Sources.dir/build.make SourceFiles/CMakeFiles/Sources.dir/FileHelper.cpp.i
+.PHONY : FileHelper.cpp.i
+
+FileHelper.s: FileHelper.cpp.s
+
+.PHONY : FileHelper.s
+
+# target to generate assembly for a file
+FileHelper.cpp.s:
+	cd /home/sweet12prof/Desktop/Final/CacheSim_v2/build && $(MAKE) -f SourceFiles/CMakeFiles/Sources.dir/build.make SourceFiles/CMakeFiles/Sources.dir/FileHelper.cpp.s
+.PHONY : FileHelper.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -161,9 +215,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Sources"
+	@echo "... CacheAnalyzer.o"
+	@echo "... CacheAnalyzer.i"
+	@echo "... CacheAnalyzer.s"
 	@echo "... CacheConfig.o"
 	@echo "... CacheConfig.i"
 	@echo "... CacheConfig.s"
+	@echo "... FileHelper.o"
+	@echo "... FileHelper.i"
+	@echo "... FileHelper.s"
 .PHONY : help
 
 

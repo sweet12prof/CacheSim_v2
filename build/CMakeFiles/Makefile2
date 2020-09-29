@@ -66,7 +66,7 @@ CMAKE_BINARY_DIR = /home/sweet12prof/Desktop/Final/CacheSim_v2/build
 CMakeFiles/output.dir/all: SourceFiles/CMakeFiles/Sources.dir/all
 	$(MAKE) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/depend
 	$(MAKE) -f CMakeFiles/output.dir/build.make CMakeFiles/output.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sweet12prof/Desktop/Final/CacheSim_v2/build/CMakeFiles --progress-num=3,4 "Built target output"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sweet12prof/Desktop/Final/CacheSim_v2/build/CMakeFiles --progress-num=5,6 "Built target output"
 .PHONY : CMakeFiles/output.dir/all
 
 # Include target in all.
@@ -76,7 +76,7 @@ all: CMakeFiles/output.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/output.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sweet12prof/Desktop/Final/CacheSim_v2/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sweet12prof/Desktop/Final/CacheSim_v2/build/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/output.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sweet12prof/Desktop/Final/CacheSim_v2/build/CMakeFiles 0
 .PHONY : CMakeFiles/output.dir/rule
@@ -139,7 +139,7 @@ SourceFiles/preinstall:
 SourceFiles/CMakeFiles/Sources.dir/all:
 	$(MAKE) -f SourceFiles/CMakeFiles/Sources.dir/build.make SourceFiles/CMakeFiles/Sources.dir/depend
 	$(MAKE) -f SourceFiles/CMakeFiles/Sources.dir/build.make SourceFiles/CMakeFiles/Sources.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sweet12prof/Desktop/Final/CacheSim_v2/build/CMakeFiles --progress-num=1,2 "Built target Sources"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sweet12prof/Desktop/Final/CacheSim_v2/build/CMakeFiles --progress-num=1,2,3,4 "Built target Sources"
 .PHONY : SourceFiles/CMakeFiles/Sources.dir/all
 
 # Include target in all.
@@ -149,7 +149,7 @@ all: SourceFiles/CMakeFiles/Sources.dir/all
 
 # Build rule for subdir invocation for target.
 SourceFiles/CMakeFiles/Sources.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sweet12prof/Desktop/Final/CacheSim_v2/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sweet12prof/Desktop/Final/CacheSim_v2/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 SourceFiles/CMakeFiles/Sources.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sweet12prof/Desktop/Final/CacheSim_v2/build/CMakeFiles 0
 .PHONY : SourceFiles/CMakeFiles/Sources.dir/rule

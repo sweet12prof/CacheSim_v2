@@ -1,5 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Sources.dir/CacheConfig.cpp.o"
+  "CMakeFiles/Sources.dir/CacheAnalyzer.cpp.o"
+  "CMakeFiles/Sources.dir/FileHelper.cpp.o"
   "libSources.pdb"
   "libSources.a"
 )

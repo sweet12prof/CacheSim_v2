@@ -81,17 +81,69 @@ SourceFiles/CMakeFiles/Sources.dir/CacheConfig.cpp.o.provides: SourceFiles/CMake
 SourceFiles/CMakeFiles/Sources.dir/CacheConfig.cpp.o.provides.build: SourceFiles/CMakeFiles/Sources.dir/CacheConfig.cpp.o
 
 
+SourceFiles/CMakeFiles/Sources.dir/CacheAnalyzer.cpp.o: SourceFiles/CMakeFiles/Sources.dir/flags.make
+SourceFiles/CMakeFiles/Sources.dir/CacheAnalyzer.cpp.o: ../SourceFiles/CacheAnalyzer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sweet12prof/Desktop/Final/CacheSim_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object SourceFiles/CMakeFiles/Sources.dir/CacheAnalyzer.cpp.o"
+	cd /home/sweet12prof/Desktop/Final/CacheSim_v2/build/SourceFiles && /opt/rh/devtoolset-9/root/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Sources.dir/CacheAnalyzer.cpp.o -c /home/sweet12prof/Desktop/Final/CacheSim_v2/SourceFiles/CacheAnalyzer.cpp
+
+SourceFiles/CMakeFiles/Sources.dir/CacheAnalyzer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Sources.dir/CacheAnalyzer.cpp.i"
+	cd /home/sweet12prof/Desktop/Final/CacheSim_v2/build/SourceFiles && /opt/rh/devtoolset-9/root/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/sweet12prof/Desktop/Final/CacheSim_v2/SourceFiles/CacheAnalyzer.cpp > CMakeFiles/Sources.dir/CacheAnalyzer.cpp.i
+
+SourceFiles/CMakeFiles/Sources.dir/CacheAnalyzer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Sources.dir/CacheAnalyzer.cpp.s"
+	cd /home/sweet12prof/Desktop/Final/CacheSim_v2/build/SourceFiles && /opt/rh/devtoolset-9/root/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/sweet12prof/Desktop/Final/CacheSim_v2/SourceFiles/CacheAnalyzer.cpp -o CMakeFiles/Sources.dir/CacheAnalyzer.cpp.s
+
+SourceFiles/CMakeFiles/Sources.dir/CacheAnalyzer.cpp.o.requires:
+
+.PHONY : SourceFiles/CMakeFiles/Sources.dir/CacheAnalyzer.cpp.o.requires
+
+SourceFiles/CMakeFiles/Sources.dir/CacheAnalyzer.cpp.o.provides: SourceFiles/CMakeFiles/Sources.dir/CacheAnalyzer.cpp.o.requires
+	$(MAKE) -f SourceFiles/CMakeFiles/Sources.dir/build.make SourceFiles/CMakeFiles/Sources.dir/CacheAnalyzer.cpp.o.provides.build
+.PHONY : SourceFiles/CMakeFiles/Sources.dir/CacheAnalyzer.cpp.o.provides
+
+SourceFiles/CMakeFiles/Sources.dir/CacheAnalyzer.cpp.o.provides.build: SourceFiles/CMakeFiles/Sources.dir/CacheAnalyzer.cpp.o
+
+
+SourceFiles/CMakeFiles/Sources.dir/FileHelper.cpp.o: SourceFiles/CMakeFiles/Sources.dir/flags.make
+SourceFiles/CMakeFiles/Sources.dir/FileHelper.cpp.o: ../SourceFiles/FileHelper.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sweet12prof/Desktop/Final/CacheSim_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object SourceFiles/CMakeFiles/Sources.dir/FileHelper.cpp.o"
+	cd /home/sweet12prof/Desktop/Final/CacheSim_v2/build/SourceFiles && /opt/rh/devtoolset-9/root/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Sources.dir/FileHelper.cpp.o -c /home/sweet12prof/Desktop/Final/CacheSim_v2/SourceFiles/FileHelper.cpp
+
+SourceFiles/CMakeFiles/Sources.dir/FileHelper.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Sources.dir/FileHelper.cpp.i"
+	cd /home/sweet12prof/Desktop/Final/CacheSim_v2/build/SourceFiles && /opt/rh/devtoolset-9/root/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/sweet12prof/Desktop/Final/CacheSim_v2/SourceFiles/FileHelper.cpp > CMakeFiles/Sources.dir/FileHelper.cpp.i
+
+SourceFiles/CMakeFiles/Sources.dir/FileHelper.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Sources.dir/FileHelper.cpp.s"
+	cd /home/sweet12prof/Desktop/Final/CacheSim_v2/build/SourceFiles && /opt/rh/devtoolset-9/root/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/sweet12prof/Desktop/Final/CacheSim_v2/SourceFiles/FileHelper.cpp -o CMakeFiles/Sources.dir/FileHelper.cpp.s
+
+SourceFiles/CMakeFiles/Sources.dir/FileHelper.cpp.o.requires:
+
+.PHONY : SourceFiles/CMakeFiles/Sources.dir/FileHelper.cpp.o.requires
+
+SourceFiles/CMakeFiles/Sources.dir/FileHelper.cpp.o.provides: SourceFiles/CMakeFiles/Sources.dir/FileHelper.cpp.o.requires
+	$(MAKE) -f SourceFiles/CMakeFiles/Sources.dir/build.make SourceFiles/CMakeFiles/Sources.dir/FileHelper.cpp.o.provides.build
+.PHONY : SourceFiles/CMakeFiles/Sources.dir/FileHelper.cpp.o.provides
+
+SourceFiles/CMakeFiles/Sources.dir/FileHelper.cpp.o.provides.build: SourceFiles/CMakeFiles/Sources.dir/FileHelper.cpp.o
+
+
 # Object files for target Sources
 Sources_OBJECTS = \
-"CMakeFiles/Sources.dir/CacheConfig.cpp.o"
+"CMakeFiles/Sources.dir/CacheConfig.cpp.o" \
+"CMakeFiles/Sources.dir/CacheAnalyzer.cpp.o" \
+"CMakeFiles/Sources.dir/FileHelper.cpp.o"
 
 # External object files for target Sources
 Sources_EXTERNAL_OBJECTS =
 
 SourceFiles/libSources.a: SourceFiles/CMakeFiles/Sources.dir/CacheConfig.cpp.o
+SourceFiles/libSources.a: SourceFiles/CMakeFiles/Sources.dir/CacheAnalyzer.cpp.o
+SourceFiles/libSources.a: SourceFiles/CMakeFiles/Sources.dir/FileHelper.cpp.o
 SourceFiles/libSources.a: SourceFiles/CMakeFiles/Sources.dir/build.make
 SourceFiles/libSources.a: SourceFiles/CMakeFiles/Sources.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/sweet12prof/Desktop/Final/CacheSim_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libSources.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/sweet12prof/Desktop/Final/CacheSim_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX static library libSources.a"
 	cd /home/sweet12prof/Desktop/Final/CacheSim_v2/build/SourceFiles && $(CMAKE_COMMAND) -P CMakeFiles/Sources.dir/cmake_clean_target.cmake
 	cd /home/sweet12prof/Desktop/Final/CacheSim_v2/build/SourceFiles && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Sources.dir/link.txt --verbose=$(VERBOSE)
 
@@ -101,6 +153,8 @@ SourceFiles/CMakeFiles/Sources.dir/build: SourceFiles/libSources.a
 .PHONY : SourceFiles/CMakeFiles/Sources.dir/build
 
 SourceFiles/CMakeFiles/Sources.dir/requires: SourceFiles/CMakeFiles/Sources.dir/CacheConfig.cpp.o.requires
+SourceFiles/CMakeFiles/Sources.dir/requires: SourceFiles/CMakeFiles/Sources.dir/CacheAnalyzer.cpp.o.requires
+SourceFiles/CMakeFiles/Sources.dir/requires: SourceFiles/CMakeFiles/Sources.dir/FileHelper.cpp.o.requires
 
 .PHONY : SourceFiles/CMakeFiles/Sources.dir/requires
 

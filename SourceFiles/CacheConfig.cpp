@@ -28,8 +28,8 @@ Cache::Cache(const int& associativityInput, const int& blockSizeInput, const int
 	std::cout << "Cache Index is: " << this->cacheIndex << std::endl;
 	std::cout << "Flattened index is : " << this->FlattenedIndex << std::endl;
 
-	Cache::tagField.at(1023) = 123;
-	Cache::validField.at(1023) = true;
+	// Cache::tagField.at(1023) = 123;
+	// Cache::validField.at(1023) = true;
 
 
 }
@@ -119,6 +119,19 @@ int Cache::getassociativity() const {
 	return this->associativity;
 }
 
+
+int Cache::getBlockSize() const {
+	return this->blockSize;
+}
+
+int Cache::getCacheSize() const {
+	return this->cacheSize;
+}
+
+
+int Cache::getNumberOfBlocks() const{
+	return this->numOfBlocks;
+}
 //-----------------------------------------------------------------------------------------------------------------//
 //---------------------------------------------------Cache Operations----------------------------------------------//
 //-----------------------------------------------------------------------------------------------------------------//
@@ -132,7 +145,7 @@ int Cache::getassociativity() const {
 	//-----And also the flattened address if found
 	std::pair <bool, std::pair <bool, int> > Cache::isHitAccess(const int& Tag, const int& searchAddress) {
 
-		std::cout << "search address is : " << searchAddress << std::endl;
+		//std::cout << "search address is : " << searchAddress << std::endl;
 
 		if (searchAddress >= Cache::FlattenedIndex)
 			return { false, {this->isDirtyField.at(Cache::blockToEvict(searchAddress % Cache::cacheIndex)), -1} };
@@ -144,7 +157,7 @@ int Cache::getassociativity() const {
 			if (Cache::associativity > 1)
 				return Cache::isHitAccess(Tag, (searchAddress + this->cacheIndex));
 			else
-				return { false, {false, -1} };
+				return { false, {this->isDirtyField.at(searchAddress), -1} };
 		}
 
 
@@ -233,9 +246,9 @@ int Cache::getassociativity() const {
 			j++;
 		}
 
-		for (auto item : resultLRU)
-			std::cout << item << " ";
-		std::cout << std::endl;
+		// for (auto item : resultLRU)
+		// 	std::cout << item << " ";
+		// std::cout << std::endl;
 
 
 		return resultLRU.front();

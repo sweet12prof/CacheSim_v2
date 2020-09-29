@@ -10,6 +10,7 @@ private:
 	int cacheSize;
 	int blockSize;
 	int wordSize;
+	
 	//Fields
 	std::vector<int> tagField;
 	std::vector<bool> validField;
@@ -49,6 +50,11 @@ public:
 	int getCacheIndex() const;
 	int getFlattenedIndex() const;
 	int getassociativity() const;
+	int getBlockSize() const;
+	int getCacheSize() const;
+	int getNumberOfBlocks() const;
+
+	
 
 	//CacheOperations
 	int  normalizeAddress(const int&);
