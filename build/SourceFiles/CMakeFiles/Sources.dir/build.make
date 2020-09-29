@@ -57,38 +57,38 @@ include SourceFiles/CMakeFiles/Sources.dir/progress.make
 # Include the compile flags for this target's objects.
 include SourceFiles/CMakeFiles/Sources.dir/flags.make
 
-SourceFiles/CMakeFiles/Sources.dir/Cache.cpp.o: SourceFiles/CMakeFiles/Sources.dir/flags.make
-SourceFiles/CMakeFiles/Sources.dir/Cache.cpp.o: ../SourceFiles/Cache.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sweet12prof/Desktop/Final/CacheSim_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object SourceFiles/CMakeFiles/Sources.dir/Cache.cpp.o"
-	cd /home/sweet12prof/Desktop/Final/CacheSim_v2/build/SourceFiles && /opt/rh/devtoolset-9/root/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Sources.dir/Cache.cpp.o -c /home/sweet12prof/Desktop/Final/CacheSim_v2/SourceFiles/Cache.cpp
+SourceFiles/CMakeFiles/Sources.dir/CacheConfig.cpp.o: SourceFiles/CMakeFiles/Sources.dir/flags.make
+SourceFiles/CMakeFiles/Sources.dir/CacheConfig.cpp.o: ../SourceFiles/CacheConfig.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sweet12prof/Desktop/Final/CacheSim_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object SourceFiles/CMakeFiles/Sources.dir/CacheConfig.cpp.o"
+	cd /home/sweet12prof/Desktop/Final/CacheSim_v2/build/SourceFiles && /opt/rh/devtoolset-9/root/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Sources.dir/CacheConfig.cpp.o -c /home/sweet12prof/Desktop/Final/CacheSim_v2/SourceFiles/CacheConfig.cpp
 
-SourceFiles/CMakeFiles/Sources.dir/Cache.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Sources.dir/Cache.cpp.i"
-	cd /home/sweet12prof/Desktop/Final/CacheSim_v2/build/SourceFiles && /opt/rh/devtoolset-9/root/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/sweet12prof/Desktop/Final/CacheSim_v2/SourceFiles/Cache.cpp > CMakeFiles/Sources.dir/Cache.cpp.i
+SourceFiles/CMakeFiles/Sources.dir/CacheConfig.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Sources.dir/CacheConfig.cpp.i"
+	cd /home/sweet12prof/Desktop/Final/CacheSim_v2/build/SourceFiles && /opt/rh/devtoolset-9/root/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/sweet12prof/Desktop/Final/CacheSim_v2/SourceFiles/CacheConfig.cpp > CMakeFiles/Sources.dir/CacheConfig.cpp.i
 
-SourceFiles/CMakeFiles/Sources.dir/Cache.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Sources.dir/Cache.cpp.s"
-	cd /home/sweet12prof/Desktop/Final/CacheSim_v2/build/SourceFiles && /opt/rh/devtoolset-9/root/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/sweet12prof/Desktop/Final/CacheSim_v2/SourceFiles/Cache.cpp -o CMakeFiles/Sources.dir/Cache.cpp.s
+SourceFiles/CMakeFiles/Sources.dir/CacheConfig.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Sources.dir/CacheConfig.cpp.s"
+	cd /home/sweet12prof/Desktop/Final/CacheSim_v2/build/SourceFiles && /opt/rh/devtoolset-9/root/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/sweet12prof/Desktop/Final/CacheSim_v2/SourceFiles/CacheConfig.cpp -o CMakeFiles/Sources.dir/CacheConfig.cpp.s
 
-SourceFiles/CMakeFiles/Sources.dir/Cache.cpp.o.requires:
+SourceFiles/CMakeFiles/Sources.dir/CacheConfig.cpp.o.requires:
 
-.PHONY : SourceFiles/CMakeFiles/Sources.dir/Cache.cpp.o.requires
+.PHONY : SourceFiles/CMakeFiles/Sources.dir/CacheConfig.cpp.o.requires
 
-SourceFiles/CMakeFiles/Sources.dir/Cache.cpp.o.provides: SourceFiles/CMakeFiles/Sources.dir/Cache.cpp.o.requires
-	$(MAKE) -f SourceFiles/CMakeFiles/Sources.dir/build.make SourceFiles/CMakeFiles/Sources.dir/Cache.cpp.o.provides.build
-.PHONY : SourceFiles/CMakeFiles/Sources.dir/Cache.cpp.o.provides
+SourceFiles/CMakeFiles/Sources.dir/CacheConfig.cpp.o.provides: SourceFiles/CMakeFiles/Sources.dir/CacheConfig.cpp.o.requires
+	$(MAKE) -f SourceFiles/CMakeFiles/Sources.dir/build.make SourceFiles/CMakeFiles/Sources.dir/CacheConfig.cpp.o.provides.build
+.PHONY : SourceFiles/CMakeFiles/Sources.dir/CacheConfig.cpp.o.provides
 
-SourceFiles/CMakeFiles/Sources.dir/Cache.cpp.o.provides.build: SourceFiles/CMakeFiles/Sources.dir/Cache.cpp.o
+SourceFiles/CMakeFiles/Sources.dir/CacheConfig.cpp.o.provides.build: SourceFiles/CMakeFiles/Sources.dir/CacheConfig.cpp.o
 
 
 # Object files for target Sources
 Sources_OBJECTS = \
-"CMakeFiles/Sources.dir/Cache.cpp.o"
+"CMakeFiles/Sources.dir/CacheConfig.cpp.o"
 
 # External object files for target Sources
 Sources_EXTERNAL_OBJECTS =
 
-SourceFiles/libSources.a: SourceFiles/CMakeFiles/Sources.dir/Cache.cpp.o
+SourceFiles/libSources.a: SourceFiles/CMakeFiles/Sources.dir/CacheConfig.cpp.o
 SourceFiles/libSources.a: SourceFiles/CMakeFiles/Sources.dir/build.make
 SourceFiles/libSources.a: SourceFiles/CMakeFiles/Sources.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/sweet12prof/Desktop/Final/CacheSim_v2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libSources.a"
@@ -100,7 +100,7 @@ SourceFiles/CMakeFiles/Sources.dir/build: SourceFiles/libSources.a
 
 .PHONY : SourceFiles/CMakeFiles/Sources.dir/build
 
-SourceFiles/CMakeFiles/Sources.dir/requires: SourceFiles/CMakeFiles/Sources.dir/Cache.cpp.o.requires
+SourceFiles/CMakeFiles/Sources.dir/requires: SourceFiles/CMakeFiles/Sources.dir/CacheConfig.cpp.o.requires
 
 .PHONY : SourceFiles/CMakeFiles/Sources.dir/requires
 

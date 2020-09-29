@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Sources.dir/Cache.cpp.o"
+  "CMakeFiles/Sources.dir/CacheConfig.cpp.o"
   "libSources.pdb"
   "libSources.a"
 )

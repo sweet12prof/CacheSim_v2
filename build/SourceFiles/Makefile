@@ -125,32 +125,32 @@ Sources/fast:
 	cd /home/sweet12prof/Desktop/Final/CacheSim_v2/build && $(MAKE) -f SourceFiles/CMakeFiles/Sources.dir/build.make SourceFiles/CMakeFiles/Sources.dir/build
 .PHONY : Sources/fast
 
-Cache.o: Cache.cpp.o
+CacheConfig.o: CacheConfig.cpp.o
 
-.PHONY : Cache.o
+.PHONY : CacheConfig.o
 
 # target to build an object file
-Cache.cpp.o:
-	cd /home/sweet12prof/Desktop/Final/CacheSim_v2/build && $(MAKE) -f SourceFiles/CMakeFiles/Sources.dir/build.make SourceFiles/CMakeFiles/Sources.dir/Cache.cpp.o
-.PHONY : Cache.cpp.o
+CacheConfig.cpp.o:
+	cd /home/sweet12prof/Desktop/Final/CacheSim_v2/build && $(MAKE) -f SourceFiles/CMakeFiles/Sources.dir/build.make SourceFiles/CMakeFiles/Sources.dir/CacheConfig.cpp.o
+.PHONY : CacheConfig.cpp.o
 
-Cache.i: Cache.cpp.i
+CacheConfig.i: CacheConfig.cpp.i
 
-.PHONY : Cache.i
+.PHONY : CacheConfig.i
 
 # target to preprocess a source file
-Cache.cpp.i:
-	cd /home/sweet12prof/Desktop/Final/CacheSim_v2/build && $(MAKE) -f SourceFiles/CMakeFiles/Sources.dir/build.make SourceFiles/CMakeFiles/Sources.dir/Cache.cpp.i
-.PHONY : Cache.cpp.i
+CacheConfig.cpp.i:
+	cd /home/sweet12prof/Desktop/Final/CacheSim_v2/build && $(MAKE) -f SourceFiles/CMakeFiles/Sources.dir/build.make SourceFiles/CMakeFiles/Sources.dir/CacheConfig.cpp.i
+.PHONY : CacheConfig.cpp.i
 
-Cache.s: Cache.cpp.s
+CacheConfig.s: CacheConfig.cpp.s
 
-.PHONY : Cache.s
+.PHONY : CacheConfig.s
 
 # target to generate assembly for a file
-Cache.cpp.s:
-	cd /home/sweet12prof/Desktop/Final/CacheSim_v2/build && $(MAKE) -f SourceFiles/CMakeFiles/Sources.dir/build.make SourceFiles/CMakeFiles/Sources.dir/Cache.cpp.s
-.PHONY : Cache.cpp.s
+CacheConfig.cpp.s:
+	cd /home/sweet12prof/Desktop/Final/CacheSim_v2/build && $(MAKE) -f SourceFiles/CMakeFiles/Sources.dir/build.make SourceFiles/CMakeFiles/Sources.dir/CacheConfig.cpp.s
+.PHONY : CacheConfig.cpp.s
 
 # Help Target
 help:
@@ -161,9 +161,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Sources"
-	@echo "... Cache.o"
-	@echo "... Cache.i"
-	@echo "... Cache.s"
+	@echo "... CacheConfig.o"
+	@echo "... CacheConfig.i"
+	@echo "... CacheConfig.s"
 .PHONY : help
 
 
