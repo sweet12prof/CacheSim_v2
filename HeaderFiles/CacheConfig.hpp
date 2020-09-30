@@ -53,8 +53,9 @@ public:
 	int getBlockSize() const;
 	int getCacheSize() const;
 	int getNumberOfBlocks() const;
+	int getSomeCount() const;
 
-	
+	int someCount;
 
 	//CacheOperations
 	int  normalizeAddress(const int&);

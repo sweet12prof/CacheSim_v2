@@ -110,24 +110,29 @@ std::pair <int, int> Analyzer::tag_index_gen(const unsigned int & address){
 	 hexinMem >> hexAddress_int;
 
 	 std::pair <int, int> accessParams = Analyzer::tag_index_gen(hexAddress_int);  // Generate Tag and Address based on address supplied
-
+	//accessParams.second = accessParams.second & Analyzer::getCacheIndex();
 	 if(isWrite) // Cache Access is a Store/Write
 	 	{
 			++this->store_Count; // Increment StoreCount
 			std::pair <bool, bool> storeResult = Analyzer::CacheWrite(accessParams.first, accessParams.second); // Proceed to Write
 
 			if(storeResult.first)// Write Hit
-					++this->store_hitCount; // Increment Store Hit Count
+					{
+						++this->store_hitCount;
+						
+					} // Increment Store Hit Count
 			else{	// Write Miss
 					++this->store_missCount; // Increment Store miss
 					this->execution_time_Cycles += missPenalty; // Increment execution time by miss Penalty
-					++memFechCount;
+					
 				if(storeResult.second == true) //Block to replcae is dirty
 					{
 						//std::cout << "Heere1";
-						++this->evictCount; //Increment evict Count
+						this->evictCount+=1;//Increment evict Count
 						this->execution_time_Cycles+=2; // Increment Execution time by extra time to evict block
 					}
+				// else 
+				// 	++memFechCount;
 				
 			}
 		} 
@@ -145,10 +150,11 @@ std::pair <int, int> Analyzer::tag_index_gen(const unsigned int & address){
 				if(loadResult.second == true) // bLOck to replace after Load Miss Is Dirty
 					{
 						//std::cout << "Heere2";
-						++this->evictCount; // Increment Evict Count
+						this->evictCount+=1; // Increment Evict Count
 						this->execution_time_Cycles+=2; // Increment Execution time by extra cycles to evict block
 					}
-				++memFechCount;
+				// else 
+				// ++memFechCount;
 			}
 	}
  }
@@ -164,6 +170,6 @@ std::pair <int, int> Analyzer::tag_index_gen(const unsigned int & address){
 	 std::cout << std::left << std::setw(25) << "Instruction"   << std::setw(3) << this->instructionCount << std::endl;
 	 std::cout << std::left << std::setw(25) << "Execution Time in Cycles " << std::setw(3)   << this->execution_time_Cycles << std::endl;
 	 std::cout << std::left << std::setw(25) << "Evict Count " << std::setw(3)   << this->evictCount << std::endl;
-	  std::cout << std::left << std::setw(25) << "MemFetch Count " << std::setw(3)   << this->memFechCount << std::endl;
+	  std::cout << std::left << std::setw(25) << "Some Count is " << std::setw(3)   << Analyzer::getSomeCount() << std::endl;
 	 
  }

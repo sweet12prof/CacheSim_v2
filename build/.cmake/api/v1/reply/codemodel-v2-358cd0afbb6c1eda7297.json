@@ -1,0 +1,98 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.3.2"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "HeaderFiles",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.3.2"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "HeaderFiles"
+				},
+				{
+					"build" : "SourceFiles",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.3.2"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "SourceFiles",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2
+					],
+					"name" : "Project",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 2,
+					"id" : "Sources::@a076de986d942e268687",
+					"jsonFile" : "target-Sources-Debug-49ee0184db787312d91f.json",
+					"name" : "Sources",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "output::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-output-Debug-4448b46dcc0cfba9419f.json",
+					"name" : "output",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/sweet12prof/Desktop/Final/CacheSim_v2/build",
+		"source" : "/home/sweet12prof/Desktop/Final/CacheSim_v2"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 1
+	}
+}

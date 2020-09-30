@@ -1,22 +1,22 @@
 [
 {
   "directory": "/home/sweet12prof/Desktop/Final/CacheSim_v2/build",
-  "command": "/opt/rh/devtoolset-9/root/usr/bin/g++    -g   -o CMakeFiles/output.dir/main.cpp.o -c /home/sweet12prof/Desktop/Final/CacheSim_v2/main.cpp",
+  "command": "/opt/rh/devtoolset-9/root/usr/bin/g++   -g -o CMakeFiles/output.dir/main.cpp.o -c /home/sweet12prof/Desktop/Final/CacheSim_v2/main.cpp",
   "file": "/home/sweet12prof/Desktop/Final/CacheSim_v2/main.cpp"
 },
 {
   "directory": "/home/sweet12prof/Desktop/Final/CacheSim_v2/build/SourceFiles",
-  "command": "/opt/rh/devtoolset-9/root/usr/bin/g++    -g   -o CMakeFiles/Sources.dir/CacheConfig.cpp.o -c /home/sweet12prof/Desktop/Final/CacheSim_v2/SourceFiles/CacheConfig.cpp",
+  "command": "/opt/rh/devtoolset-9/root/usr/bin/g++   -g -o CMakeFiles/Sources.dir/CacheConfig.cpp.o -c /home/sweet12prof/Desktop/Final/CacheSim_v2/SourceFiles/CacheConfig.cpp",
   "file": "/home/sweet12prof/Desktop/Final/CacheSim_v2/SourceFiles/CacheConfig.cpp"
 },
 {
   "directory": "/home/sweet12prof/Desktop/Final/CacheSim_v2/build/SourceFiles",
-  "command": "/opt/rh/devtoolset-9/root/usr/bin/g++    -g   -o CMakeFiles/Sources.dir/CacheAnalyzer.cpp.o -c /home/sweet12prof/Desktop/Final/CacheSim_v2/SourceFiles/CacheAnalyzer.cpp",
+  "command": "/opt/rh/devtoolset-9/root/usr/bin/g++   -g -o CMakeFiles/Sources.dir/CacheAnalyzer.cpp.o -c /home/sweet12prof/Desktop/Final/CacheSim_v2/SourceFiles/CacheAnalyzer.cpp",
   "file": "/home/sweet12prof/Desktop/Final/CacheSim_v2/SourceFiles/CacheAnalyzer.cpp"
 },
 {
   "directory": "/home/sweet12prof/Desktop/Final/CacheSim_v2/build/SourceFiles",
-  "command": "/opt/rh/devtoolset-9/root/usr/bin/g++    -g   -o CMakeFiles/Sources.dir/FileHelper.cpp.o -c /home/sweet12prof/Desktop/Final/CacheSim_v2/SourceFiles/FileHelper.cpp",
+  "command": "/opt/rh/devtoolset-9/root/usr/bin/g++   -g -o CMakeFiles/Sources.dir/FileHelper.cpp.o -c /home/sweet12prof/Desktop/Final/CacheSim_v2/SourceFiles/FileHelper.cpp",
   "file": "/home/sweet12prof/Desktop/Final/CacheSim_v2/SourceFiles/FileHelper.cpp"
 }
 ]

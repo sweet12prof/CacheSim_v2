@@ -10,7 +10,8 @@ Cache::Cache(const int& associativityInput, const int& blockSizeInput, const int
 	: blockSize{ blockSizeInput },
 	associativity{ associativityInput },
 	cacheSize{ CacheSizeInput },
-	wordSize{ wordSizeInput }
+	wordSize{ wordSizeInput },
+	someCount{0}
 {
 	Cache::setNumOfBlocks();
 	Cache::setCacheIndex();
@@ -177,6 +178,7 @@ int Cache::getNumberOfBlocks() const{
 				Cache::CacheWriteback(searchAddress);
 				int loc = Cache::LRUupdate(searchAddress, -1);
 				Cache::mainMemoryFetch(Tag, searchAddress, loc);
+				this->someCount++;
 			}
 			else {
 				int loc = Cache::LRUupdate(searchAddress, -1);
@@ -202,7 +204,9 @@ int Cache::getNumberOfBlocks() const{
 	}
 
 	int Cache::blockToEvict(const int& address) {
-		return ((cacheIndex * (associativity - 1)) + address);
+		//return ((cacheIndex * LRUField.at((Cache::cacheIndex * associativity - 1))) + address);
+		int loc = Cache::LRUField.at((Cache::cacheIndex * (associativity - 1)) + address);
+		return (Cache::cacheIndex * loc) + address;
 	}
 
 	//-------------------------------------------------------------------------------//
@@ -276,12 +280,15 @@ int Cache::getNumberOfBlocks() const{
 			Cache::validField.at(accessResult.second.second) = true;
 			Cache::isDirtyField.at(accessResult.second.second) = true;
 			Cache::LRUupdate(searchAddress, (accessResult.second.second / Cache::cacheIndex));
+			
+			
 		}
 		else {
 			if (accessResult.second.first == true) {
 				Cache::CacheWriteback(searchAddress);
 				int loc = Cache::LRUupdate(searchAddress, -1);
 				Cache::mainMemoryFetch(Tag, searchAddress, loc);
+				this->someCount++;
 			}
 			else {
 				int loc = Cache::LRUupdate(searchAddress, -1);
@@ -291,4 +298,9 @@ int Cache::getNumberOfBlocks() const{
 
 
 		return returnPair;
+}
+
+
+int Cache::getSomeCount() const{
+	return this->someCount;
 }

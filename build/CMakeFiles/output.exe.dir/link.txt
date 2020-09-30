@@ -1,1 +1,0 @@
-/opt/rh/devtoolset-9/root/usr/bin/g++   -g   CMakeFiles/output.exe.dir/main.cpp.o  -o output.exe -rdynamic SourceFiles/libSources.a 

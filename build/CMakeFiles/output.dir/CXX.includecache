@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/sweet12prof/Desktop/Final/CacheSim_v2/./HeaderFiles/CacheAnalyzer.hpp
+/home/sweet12prof/Desktop/Final/CacheSim_v2/HeaderFiles/CacheAnalyzer.hpp
 CacheConfig.hpp
-/home/sweet12prof/Desktop/Final/CacheSim_v2/./HeaderFiles/CacheConfig.hpp
+/home/sweet12prof/Desktop/Final/CacheSim_v2/HeaderFiles/CacheConfig.hpp
 bitset
 -
 cmath
@@ -18,7 +18,7 @@ sstream
 iomanip
 -
 
-/home/sweet12prof/Desktop/Final/CacheSim_v2/./HeaderFiles/CacheConfig.hpp
+/home/sweet12prof/Desktop/Final/CacheSim_v2/HeaderFiles/CacheConfig.hpp
 vector
 -
 iostream
@@ -28,7 +28,7 @@ iterator
 algorithm
 -
 
-/home/sweet12prof/Desktop/Final/CacheSim_v2/./HeaderFiles/FileHelper.hpp
+/home/sweet12prof/Desktop/Final/CacheSim_v2/HeaderFiles/FileHelper.hpp
 fstream
 -
 string
@@ -48,9 +48,9 @@ iomanip
 iostream
 -
 ./HeaderFiles/CacheAnalyzer.hpp
-/home/sweet12prof/Desktop/Final/CacheSim_v2/./HeaderFiles/CacheAnalyzer.hpp
+/home/sweet12prof/Desktop/Final/CacheSim_v2/HeaderFiles/CacheAnalyzer.hpp
 ./HeaderFiles/FileHelper.hpp
-/home/sweet12prof/Desktop/Final/CacheSim_v2/./HeaderFiles/FileHelper.hpp
+/home/sweet12prof/Desktop/Final/CacheSim_v2/HeaderFiles/FileHelper.hpp
 iomanip
 -
 sstream

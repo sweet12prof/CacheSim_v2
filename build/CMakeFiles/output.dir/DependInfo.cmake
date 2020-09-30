@@ -16,3 +16,6 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 set(CMAKE_TARGET_LINKED_INFO_FILES
   "/home/sweet12prof/Desktop/Final/CacheSim_v2/build/SourceFiles/CMakeFiles/Sources.dir/DependInfo.cmake"
   )
+
+# Fortran module output directory.
+set(CMAKE_Fortran_TARGET_MODULE_DIR "")

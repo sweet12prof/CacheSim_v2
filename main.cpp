@@ -11,10 +11,105 @@ template <typename T>
 void printCacheField(std::vector <T>);
 
 //Cache someCache(8, 16, 16, 4);
-Analyzer someCache(8, 32, 64, 4, 2, 42);
-int main(int argc,  char * argv[]) {
-	// std::cout << "Hello World" << std::endl;
-	// //for(auto item : )
+//Analyzer someCache(8, 32, 64, 4, 2, 42);
+Analyzer someCache(1, 16, 16, 4, 2, 42);
+int main(int argc, char * argv[]) {
+
+	std::string filepath = argv[1];
+	FileHelper readFile(filepath);
+
+	
+	// std::vector <bool> dirtyField = someCache.getIsDirtyField();
+	// printCacheField(dirtyField);
+	// std::cout << std::endl << std::endl << std::endl << std::endl;
+
+	// someCache.Cache_Access(true, "00000010", 0);
+	// std::cout << std::endl << std::endl << std::endl << std::endl;
+	// std::vector <bool> dirtyField1 = someCache.getIsDirtyField();
+	// printCacheField(dirtyField1);
+	
+	// someCache.Cache_Access(true, "00000010", 0);
+	// std::cout << std::endl << std::endl << std::endl << std::endl;
+	// std::vector <bool> dirtyField2 = someCache.getIsDirtyField();
+	// printCacheField(dirtyField2);
+	
+	// // std::cout << std::endl << std::endl << std::endl << std::endl;
+	// // std::vector <int> LRUField1 = someCache.getLRUField();
+	// // printCacheField(LRUField1);
+
+	// someCache.Cache_Access(false,"00010010", 0);
+	// std::cout << std::endl << std::endl << std::endl << std::endl;
+	// std::vector <bool> dirtyField3 = someCache.getIsDirtyField();
+	// printCacheField(dirtyField3);
+
+	// std::cout << std::endl << std::endl << std::endl << std::endl;
+	// std::vector <int> LRUField = someCache.getLRUField();
+	// printCacheField(LRUField);
+	
+	// someCache.Cache_Access(true, "00010010", 0);
+	// // someCache.Cache_Access(true, "00010010", 0);
+	// std::cout << std::endl << std::endl << std::endl << std::endl;
+	// std::vector <bool> dirtyField4 = someCache.getIsDirtyField();
+	// printCacheField(dirtyField4);
+	
+	// someCache.Cache_Access(false,"10000010", 0);
+	// std::cout << std::endl << std::endl << std::endl << std::endl;
+	// std::vector <bool> dirtyField5 = someCache.getIsDirtyField();
+	// printCacheField(dirtyField5);
+	
+	// someCache.Cache_Access(true, "10000010", 0);
+	// std::cout << std::endl << std::endl << std::endl << std::endl;
+	// std::vector <bool> dirtyField6 = someCache.getIsDirtyField();
+	// printCacheField(dirtyField6);
+
+	// someCache.Cache_Access(true, "10000010", 0);
+	// someCache.Cache_Access(true, "10000010", 0);
+	// someCache.Cache_Access(true, "01000010", 0);
+	// someCache.Cache_Access(true, "01000010", 0);
+	// someCache.Cache_Access(true, "01000010", 0);
+	// someCache.Cache_Access(true, "01000010", 0);
+	// someCache.Cache_Access(true, "01100010", 0);
+	// someCache.Cache_Access(true, "01100010", 0);
+	// someCache.Cache_Access(true, "01100111", 0);
+	// someCache.Cache_Access(true, "11100010", 0);
+	// someCache.Cache_Access(true, "10000010", 0);
+	// someCache.Cache_Access(true, "10000010", 0);
+	// someCache.Cache_Access(true, "10000010", 0);
+	// someCache.Cache_Access(true, "10000010", 0);
+	// someCache.Cache_Access(true, "10000010", 0);
+	// someCache.Cache_Access(true, "10000010", 0);
+	// someCache.Cache_Access(true, "10000010", 0);
+
+
+	//someCache.printResults();
+
+	while(readFile.getCurrentPos() >= -1){
+		for(auto item : readFile.readChunk()){
+			someCache.Cache_Access(item.first, item.second.first, item.second.second);
+			if(readFile.getCurrentPos() == -1)
+				readFile.setCurrentPos();
+		}
+		
+	}
+
+		someCache.printResults();
+		readFile.getlinesCounted();
+	
+	// std::cout << std::endl << std::endl << std::endl << std::endl;
+	// std::vector <int> TagField = someCache.getTagField();
+	// printCacheField(TagField);
+	// std::cout << std::endl << std::endl << std::endl << std::endl;
+	// std::vector <int> LRUField = someCache.getLRUField();
+	// printCacheField(LRUField);
+	// std::cout << std::endl << std::endl << std::endl << std::endl;
+	// std::vector <bool> boolField = someCache.getValidField();
+	// printCacheField(boolField);
+
+	// std::cout << std::endl << std::endl << std::endl << std::endl;
+	// std::vector <bool> dirtyField = someCache.getIsDirtyField();
+	// printCacheField(dirtyField);
+
+	//for(auto item : )
 	// std::pair <int, int>  accessPair{ 123, 0 };
 
 
@@ -35,56 +130,6 @@ int main(int argc,  char * argv[]) {
 	// someCache.CacheRead(accessPair.first, 2);
 	// someCache.CacheWrite(accessPair.first, 2);
 	// someCache.CacheWrite(accessPair.first + 3, 2);
-
-
-	
-
-	// std::string hexNumber = "ffffffff";
-	// std::stringstream input;
-	// input << std::hex << hexNumber;
-	// unsigned int numInDecimal;
-	// input >> numInDecimal;
-
-	// std::cout << numInDecimal;
-	// auto p = someCache.tag_index_gen(numInDecimal);
-	// std::cout << "Tag is " << p.first << std::endl << "Index is " << p.second;
-
-	// std::pair < bool, std::pair < std::string, int> > accessParam {false, {"3019b6c8", 2}};
-
-	// someCache.Cache_Access(accessParam.first, accessParam.second.first, accessParam.second.second);
-
-	// someCache.printResults();
-	// std::cout << std::endl << std::endl << std::endl << std::endl;
-
-	// std::cout << std::endl << std::endl << std::endl << std::endl;
-	// std::vector <int> TagField = someCache.getTagField();
-	// printCacheField(TagField);
-	// std::cout << std::endl << std::endl << std::endl << std::endl;
-	// std::vector <int> LRUField = someCache.getLRUField();
-	// printCacheField(LRUField);
-	// std::cout << std::endl << std::endl << std::endl << std::endl;
-	// std::vector <bool> boolField = someCache.getValidField();
-	// printCacheField(boolField);
-
-
-	std::string filepath = argv[1];
-	FileHelper readFile(filepath);
-
-	while(readFile.getCurrentPos() >= -1){
-		for(auto item : readFile.readChunk()){
-			someCache.Cache_Access(item.first, item.second.first, item.second.second);
-			if(readFile.getCurrentPos() == -1)
-				readFile.setCurrentPos();
-		}
-		
-	}
-
-		someCache.printResults();
-		readFile.getlinesCounted();
-
-	// std::cout << std::endl << std::endl << std::endl << std::endl;
-	// std::vector <bool> dirtyField = someCache.getIsDirtyField();
-	// printCacheField(dirtyField);
 }
 
 	

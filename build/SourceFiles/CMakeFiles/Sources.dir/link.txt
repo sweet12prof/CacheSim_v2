@@ -1,2 +1,2 @@
-/opt/rh/devtoolset-9/root/usr/bin/ar cq libSources.a  CMakeFiles/Sources.dir/CacheConfig.cpp.o CMakeFiles/Sources.dir/CacheAnalyzer.cpp.o CMakeFiles/Sources.dir/FileHelper.cpp.o
+/opt/rh/devtoolset-9/root/usr/bin/ar qc libSources.a CMakeFiles/Sources.dir/CacheConfig.cpp.o CMakeFiles/Sources.dir/CacheAnalyzer.cpp.o CMakeFiles/Sources.dir/FileHelper.cpp.o
 /opt/rh/devtoolset-9/root/usr/bin/ranlib libSources.a
