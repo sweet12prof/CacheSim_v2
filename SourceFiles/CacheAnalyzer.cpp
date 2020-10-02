@@ -170,6 +170,6 @@ std::pair <int, int> Analyzer::tag_index_gen(const unsigned int & address){
 	 std::cout << std::left << std::setw(25) << "Instruction"   << std::setw(3) << this->instructionCount << std::endl;
 	 std::cout << std::left << std::setw(25) << "Execution Time in Cycles " << std::setw(3)   << this->execution_time_Cycles << std::endl;
 	 std::cout << std::left << std::setw(25) << "Evict Count " << std::setw(3)   << this->evictCount << std::endl;
-	  std::cout << std::left << std::setw(25) << "Some Count is " << std::setw(3)   << Analyzer::getSomeCount() << std::endl;
+//	  std::cout << std::left << std::setw(25) << "Some Count is " << std::setw(3)   << Analyzer::getSomeCount() << std::endl;
 	 
  }
