@@ -36,6 +36,8 @@ class Analyzer : public Cache {
 			int store_hitRate;
 			int store_missRate;
 
+			int Evict_Count;
+
 	public:
 		//Cache Access
 			void Cache_Access(const bool&, const std::string &, const int&);

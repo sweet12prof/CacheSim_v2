@@ -11,13 +11,13 @@ template <typename T>
 void printCacheField(std::vector <T>);
 
 //Cache someCache(1, 16, 16, 4);
-//Analyzer someCache(8, 32, 64, 4, 2, 42);
- Analyzer someCache(1, 16, 16, 4, 2, 42);
-//int main(int argc, char * argv[]) {
-int main() {
+Analyzer someCache(8, 32, 64, 4, 2, 42);
+ //Analyzer someCache(8, 16, 16, 4, 2, 42);
+int main(int argc, char * argv[]) {
+ //int main() {
 
-	// std::string filepath = argv[1];
-	// FileHelper readFile(filepath);
+	std::string filepath = argv[1];
+	FileHelper readFile(filepath);
 
 	
 	
@@ -73,38 +73,54 @@ int main() {
 	// // std::vector <bool> dirtyField6 = someCache.getIsDirtyField();
 	// // printCacheField(dirtyField6);
 
-	someCache.Cache_Access(true, "10000010", 0);
-	someCache.Cache_Access(true, "10000010", 0);
-	someCache.Cache_Access(true, "11000010", 0);
-	someCache.Cache_Access(true, "01100010", 0);
-	someCache.Cache_Access(false,"a1100010", 0);
-	someCache.Cache_Access(true, "b1000010", 0);
-	someCache.Cache_Access(true, "c1100010", 0);
-	someCache.Cache_Access(false,"d1000010", 0);
-	someCache.Cache_Access(true, "e0100010", 0);
-	someCache.Cache_Access(true, "fa100010", 0);
-	someCache.Cache_Access(false,"1ac00010", 0);
-	someCache.Cache_Access(true, "00a00010", 0);
-	someCache.Cache_Access(true, "10100010", 0);
-	someCache.Cache_Access(true, "0a000010", 0);
-	someCache.Cache_Access(true, "0b000010", 0);
-	someCache.Cache_Access(true, "00c00010", 0);
-	someCache.Cache_Access(false,"100d0010", 0);
+	// someCache.Cache_Access(false, "10000010", 0);
+	// someCache.Cache_Access(true, "10000010", 0);
+	// someCache.Cache_Access(true, "11000010", 0);
+	// someCache.Cache_Access(true, "11000010", 0);
+	// someCache.Cache_Access(false,"a1100010", 0);
+	// someCache.Cache_Access(true, "b1000010", 0);
+
+	// std::cout << std::endl << std::endl << std::endl << std::endl;
+	// std::vector <int> dirtyField = someCache.getLRUField();
+	// printCacheField(dirtyField);
+
+	
+
+	// someCache.Cache_Access(true, "c1100010", 0);
+	// someCache.Cache_Access(false,"d1000010", 0);
+	// someCache.Cache_Access(true, "e0100010", 0);
+	// someCache.Cache_Access(true, "fa100010", 0);
+	// someCache.Cache_Access(false,"1ac00010", 0);
+	// someCache.Cache_Access(true, "00a00010", 0);
+	// someCache.Cache_Access(true, "10100010", 0);
+	// someCache.Cache_Access(true, "0a000010", 0);
+	// someCache.Cache_Access(true, "0b000010", 0);
+	// someCache.Cache_Access(true, "00c00010", 0);
+	// someCache.Cache_Access(false,"100d0010", 0);
 
 
-	// //someCache.printResults();
+	// someCache.printResults();
 
-	// while(readFile.getCurrentPos() >= -1){
-	// 	for(auto item : readFile.readChunk()){
-	// 		someCache.Cache_Access(item.first, item.second.first, item.second.second);
-	// 		if(readFile.getCurrentPos() == -1)
-	// 			readFile.setCurrentPos();
-	// 	}
+	// // std::cout << std::endl << std::endl << std::endl << std::endl;
+	// // std::vector <bool> dirtyField = someCache.getIsDirtyField();
+	// // printCacheField(dirtyField);
+
+	// std::cout << std::endl << std::endl << std::endl << std::endl;
+	// std::vector <int> dirtyField2 = someCache.getTagField();
+	// printCacheField(dirtyField2);
+
+
+	while(readFile.getCurrentPos() != -1){
+		for(auto item : readFile.readChunk()){
+			someCache.Cache_Access(item.first, item.second.first, item.second.second);
+			// if(readFile.getCurrentPos() == -1)
+			// 	readFile.setCurrentPos();
+		}
 		
-	// }
+	}
 
 		someCache.printResults();
-	// 	readFile.getlinesCounted();
+	 	readFile.getlinesCounted();
 	
 	// std::cout << std::endl << std::endl << std::endl << std::endl;
 	// std::vector <int> TagField = someCache.getTagField();
@@ -116,9 +132,7 @@ int main() {
 	// std::vector <bool> boolField = someCache.getValidField();
 	// printCacheField(boolField);
 
-	// std::cout << std::endl << std::endl << std::endl << std::endl;
-	// std::vector <bool> dirtyField = someCache.getIsDirtyField();
-	// printCacheField(dirtyField);
+
 
 	//for(auto item : )
 	// std::pair <int, int>  accessPair{ 123, 0 };

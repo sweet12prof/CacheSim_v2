@@ -140,7 +140,8 @@ int Cache::getNumberOfBlocks() const{
 
 int Cache::blockToEvict(const int & searchAddress){
 	int loc = Cache::LRUField.at(searchAddress + ( (Cache::associativity - 1) * Cache::cacheIndex) );
-	return LRUField.at( (loc * Cache::cacheIndex) + searchAddress);
+	//int loc2 = LRUField.at( (loc * Cache::cacheIndex) + searchAddress);
+	return loc;
 }
 
 int Cache::normalizeAddress(const int & indexInput){
@@ -149,8 +150,12 @@ int Cache::normalizeAddress(const int & indexInput){
 
 std::pair < bool, std::pair <bool, int >> Cache::isHitAccess(const int & Tag, const int & searchAddress){
 	
-	if(searchAddress >= this->cacheIndex * this->associativity)
-		return {false, {Cache::isDirtyField.at(Cache::blockToEvict(searchAddress % Cache::cacheIndex)), -1 } };
+	if(searchAddress >= this->cacheIndex * this->associativity){
+		int loc = Cache::blockToEvict(searchAddress % Cache::cacheIndex);
+		bool val = Cache::isDirtyField.at( ((loc * Cache::cacheIndex)) + (searchAddress % Cache::cacheIndex));
+		return {false, {val, -1 } };
+	}
+		
 		
 
 	else if( (Cache::tagField.at(searchAddress) == Tag) &&  (Cache::validField.at(searchAddress) == true))
@@ -186,6 +191,7 @@ std::pair <bool, bool> Cache::CacheRead(const int & Tag, const int & address){
 			Cache::isDirtyField.at(address_toEdit) = false;
 			Cache::tagField.at(address_toEdit) = Tag;
 			Cache::validField.at(address_toEdit) = true;
+			
 	}
 	return {first, second};
 }
@@ -200,8 +206,11 @@ std::pair <bool, bool> Cache::CacheWrite(const int & Tag, const int & address){
 	if(accessResult.first == true)
 		{
 			searchAddress = Cache::normalizeAddress(address);
-			Cache::isDirtyField.at(accessResult.second.second) = true;
-			Cache::LRUupdate(searchAddress, accessResult.second.second/Cache::cacheIndex);
+			if(Cache::isDirtyField.at(accessResult.second.second) == false){
+				Cache::isDirtyField.at(accessResult.second.second) = true;			
+			}	
+				Cache::LRUupdate(searchAddress, accessResult.second.second/Cache::cacheIndex);
+
 		}
 	else {
 			searchAddress = Cache::normalizeAddress(address);
@@ -259,7 +268,7 @@ int Cache::LRUupdate(const int & searchAddress, const int indexMultiple){
 					j++;
 				}	
 
-	return resultLRU.front();
+	return resultLRU.at(0);
 }
 
 
