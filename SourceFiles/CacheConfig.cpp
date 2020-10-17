@@ -217,7 +217,7 @@ std::pair <bool, bool> Cache::CacheWrite(const int & Tag, const int & address){
 			int loc = Cache::LRUupdate(searchAddress, -1);
 			int address_toEdit = (loc * Cache::cacheIndex) + searchAddress;
 
-			Cache::isDirtyField.at(address_toEdit) = false;
+			Cache::isDirtyField.at(address_toEdit) = true;
 			Cache::validField.at(address_toEdit) = true;
 			Cache::tagField.at(address_toEdit) = Tag;
 	}

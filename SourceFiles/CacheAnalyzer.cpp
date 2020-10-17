@@ -21,6 +21,8 @@ Analyzer::Analyzer(const int& associativityIn, const int& blockSizeIn, const int
 {
 	Analyzer::setMissPenalty();
 	Analyzer::setClockSpeed();
+
+
 }
 
 
@@ -160,16 +162,27 @@ std::pair <int, int> Analyzer::tag_index_gen(const unsigned int & address){
  }
 
  void Analyzer::printResults(){
-	 std::cout << std::left << std::setw(25) << "Load Count" 	 << std::setw(3) << this->load_Count << std::endl;
-	 std::cout << std::left << std::setw(25) << "Load Hit Count"  << std::setw(3) << this->load_HitCount << std::endl;
-	 std::cout << std::left << std::setw(25) << "Load Miss Count" << std::setw(3) << this->load_missCount << std::endl << std::endl;
-	 std::cout << std::left << std::setw(25) << "Store Count is"	 << std::setw(3) << this->store_Count << std::endl;
-	 std::cout << std::left << std::setw(25) << "Store Hit Count" << std::setw(3) << this->store_hitCount << std::endl;
-	 std::cout << std::left << std::setw(25) << "Store Miss Count"<< std::setw(3) << this->store_missCount << std::endl << std::endl;
-	 std::cout << std::left << std::setw(25) << "Memory Access"  << std::setw(3) << this->load_Count + this->store_Count << std::endl;
-	 std::cout << std::left << std::setw(25) << "Instruction"   << std::setw(3) << this->instructionCount << std::endl;
-	 std::cout << std::left << std::setw(25) << "Execution Time in Cycles " << std::setw(3)   << this->execution_time_Cycles << std::endl;
-	 std::cout << std::left << std::setw(25) << "Evict Count " << std::setw(3)   << this->evictCount << std::endl;
+	 int res {this->load_Count + this->store_Count};
+	 std::cout << std::left << std::setw(28) << "Cache Parameters: " 	 << std::setw(3) << std::endl;
+	 std::cout << std::left << std::setw(28) << "Cache Size" 	 << std::setw(3) << this->getCacheSize() <<"KB" << std::endl;
+	 std::cout << std::left << std::setw(28) << "Block Size" 	 << std::setw(3) << this->getBlockSize() <<"Bytes" << std::endl;
+	 std::cout << std::left << std::setw(28) << "Associativity" 	 << std::setw(3) << this->getassociativity() << std::endl;
+	 std::cout << std::left << std::setw(28) << "Miss Penalty " << std::setw(3)   << this->missPenalty << "Cycles" << std::endl; //<< std::endl << std::endl << std::endl;
+	 std::cout << std::left << std::setw(28) << "CPU Speed" << std::setw(3) << this->clockSpeed << "GHz" << std::endl;
+	 //std::cout << std::left << std::setw(25) << "WordLength " << std::setw(3)   << this->missPenalty << std::endl;
+
+
+	 std::cout << std::left << std::setw(28) << "\tLoad Count" 	 << std::setw(3) << this->load_Count << std::endl;
+	 std::cout << std::left << std::setw(28) << "\tLoad Hit Count"  << std::setw(3) << this->load_HitCount << std::endl;
+	 std::cout << std::left << std::setw(28) << "\tLoad Miss Count" << std::setw(3) << this->load_missCount << std::endl << std::endl; // << std::endl << std::endl;;
+	 std::cout << std::left << std::setw(28) << "\tStore Count is"	 << std::setw(3) << this->store_Count << std::endl;
+	 std::cout << std::left << std::setw(28) << "\tStore Hit Count" << std::setw(3) << this->store_hitCount << std::endl;
+	 std::cout << std::left << std::setw(28) << "\tStore Miss Count"<< std::setw(3) << this->store_missCount << std::endl << std::endl;// << std::endl << std::endl;;
+	 std::cout << std::left << std::setw(28) << "\tMemory Access"  << std::setw(3) << res << std::endl;
+	 std::cout << std::left << std::setw(28) << "\tInstruction"   << std::setw(3) << this->instructionCount << std::endl;
+	 std::cout << std::left << std::setw(28) << "\tExecution Time in Cycles " << std::setw(3)   << this->execution_time_Cycles + (this->instructionCount - res )<< std::endl;
+	 std::cout << std::left << std::setw(28) << "\tEvict Count " << std::setw(3)   << this->evictCount << std::endl;
+	 
 //	  std::cout << std::left << std::setw(25) << "Some Count is " << std::setw(3)   << Analyzer::getSomeCount() << std::endl;
 	 
  }
