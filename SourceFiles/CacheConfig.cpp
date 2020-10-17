@@ -27,10 +27,7 @@ Cache::Cache(const int& associativityInput, const int& blockSizeInput, const int
 	Cache::intialiseLRUField(this->LRUField);
 
 	std::cout << "Cache Index is: " << this->cacheIndex << std::endl;
-	std::cout << "Flattened index is : " << this->FlattenedIndex << std::endl;
-
-	// Cache::tagField.at(1023) = 123;
-	// Cache::validField.at(1023) = true;
+	std::cout << "Flattened index is :    " << this->FlattenedIndex << std::endl;
 
 
 }
