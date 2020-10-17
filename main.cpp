@@ -11,8 +11,8 @@ template <typename T>
 void printCacheField(std::vector <T>);
 
 //Cache someCache(1, 16, 16, 4);
-Analyzer someCache(8, 32, 64, 4, 2, 40);
- //Analyzer someCache(8, 16, 16, 4, 2, 42);
+//Analyzer someCache(8, 32, 64, 4, 2, 40);
+Analyzer someCache(1, 16, 16, 4, 2, 30);
 int main(int argc, char * argv[]) {
  //int main() {
 	std::string filepath = argv[1];

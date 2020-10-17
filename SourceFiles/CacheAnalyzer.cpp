@@ -163,6 +163,7 @@ std::pair <int, int> Analyzer::tag_index_gen(const unsigned int & address){
 
  void Analyzer::printResults(){
 	 int res {this->load_Count + this->store_Count};
+	 std::cout << std::endl << std::endl;
 	 std::cout << std::left << std::setw(28) << "Cache Parameters: " 	 << std::setw(3) << std::endl;
 	 std::cout << std::left << std::setw(28) << "Cache Size" 	 << std::setw(3) << this->getCacheSize() <<"KB" << std::endl;
 	 std::cout << std::left << std::setw(28) << "Block Size" 	 << std::setw(3) << this->getBlockSize() <<"Bytes" << std::endl;
